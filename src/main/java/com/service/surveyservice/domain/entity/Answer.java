@@ -5,9 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor // 파라미터가 없는 생성자를 생성
@@ -17,7 +15,7 @@ import javax.persistence.Id;
 public class Answer {
     @Id // Primary Key 지정
     @Column(name = "Answer_ID") // 컬럼 지정
-//    @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT 설정 (id값이 null일 경우 자동 생성)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT 설정
     private Long id;
 
     //    여기 조인 / 관계 설정

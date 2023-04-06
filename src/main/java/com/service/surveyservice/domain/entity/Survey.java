@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Survey {
     @Id // Primary Key 지정
     @Column(name = "SURVEY_ID") // 컬럼 지정
-//    @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT 설정 (id값이 null일 경우 자동 생성)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT 설정
     private Long id;
 
     @Column // 설문조사 제목
