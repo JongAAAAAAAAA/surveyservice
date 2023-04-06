@@ -18,14 +18,12 @@ public class MemberSurvey {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // AUTO_INCREMENT 설정
     private Long id;
 
-    //    여기 조인 / 관계 설정
-//    @ManyToOne
-//    @JoinColumn(name = "Member_ID") // 어떤 column과 연결이 될 지 설정
-//    private Member memberId;
+    @ManyToOne
+    @JoinColumn(name = "Member_ID") // 어떤 column과 연결이 될 지 설정
+    private Member memberId;
 
-    //    여기 조인 / 관계 설정
-//    @ManyToOne
-//    @JoinColumn(name = "Survey_ID") // 어떤 column과 연결이 될 지 설정
-//    private Survey surveyId;
+    @ManyToOne
+    @JoinColumn(name = "Survey_ID") // 어떤 column과 연결이 될 지 설정
+    private Survey surveyId;
 }
 

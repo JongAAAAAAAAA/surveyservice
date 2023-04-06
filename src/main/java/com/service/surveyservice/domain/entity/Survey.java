@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor // 파라미터가 없는 생성자를 생성
@@ -23,4 +24,22 @@ public class Survey {
 
     @Column // 설문조사 설명
     private String description;
+
+    @Column // 설문조사 헤더 이미지
+    private String sImageURL;
+
+    @Column // 템플릿 색상
+    private String pointColor;
+
+    @Column // ?
+    private String questionOrder;
+
+    @Column // ?
+    private String surveyStatus;
+
+    @Column // 설문 조사 시작 날짜
+    private LocalDateTime openDate;
+
+    @Column // 설문 조사 종료 날짜
+    private LocalDateTime expireDate;
 }
