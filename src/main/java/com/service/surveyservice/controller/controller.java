@@ -8,4 +8,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RestController
 public class controller {
+    //폴더구조 상당히 바꿔야함.
 }
